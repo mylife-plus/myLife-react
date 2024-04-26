@@ -33,3 +33,9 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/myLife.iml
+/package-lock.json
+/.idea/vcs.xml
