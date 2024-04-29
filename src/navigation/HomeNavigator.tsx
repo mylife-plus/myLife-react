@@ -1,3 +1,5 @@
+/* This code snippet is a TypeScript React component that defines a bottom tab navigator for a mobile
+application using React Navigation. Here's a breakdown of what the code is doing: */
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet, Text, View } from 'react-native';
@@ -18,12 +20,15 @@ function BottomTabNavigator() {
         <Tab.Navigator
             tabBarOptions={{
                 showLabel: false, // Hide the tab labels
+                
             }}
+            
         >
             <Tab.Screen 
                 name="Home" 
                 component={MemoriesNavigator} 
                 options={{
+                    headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <View style={[styles.tabIconContainer, focused && styles.focused]}>
                             <Image
@@ -89,7 +94,7 @@ function BottomTabNavigator() {
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image 
                     source={require('../../assets/Menu-Icons/gear.png')} 
-                    style={{ width: 20, height: 20, marginRight: 10 }} 
+                    style={{ width: 20, height: 20, marginRight: 10,  }} 
                 />
                 <Text style={{ fontSize: 20, fontWeight: 'normal' }}>Settings</Text>
             </View>
@@ -104,6 +109,7 @@ function BottomTabNavigator() {
 
 const styles = StyleSheet.create({
     tabIconContainer: {
+        opacity: 0.2,
         width: "100%",
         height: "100%",
         justifyContent: 'center',
@@ -112,9 +118,12 @@ const styles = StyleSheet.create({
     tabIcon: {
         width: 24, // Adjust the width of the tab icons
         height: 24, // Adjust the height of the tab icons
+        
     },
     focused: {
-        backgroundColor: '#CCCCCC', // Background color when the tab is focused
+        // backgroundColor: '#CCCCCC', // Background color when the tab is focused
+        opacity : 1
+        
     },
 });
 
