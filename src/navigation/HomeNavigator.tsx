@@ -22,6 +22,9 @@ function BottomTabNavigator() {
                 showLabel: false, // Hide the tab labels
                 
             }}
+            screenOptions={{
+                tabBarStyle: { backgroundColor: 'transparent',borderBlockColor: 'transparent'},
+              }}
             
         >
             <Tab.Screen 

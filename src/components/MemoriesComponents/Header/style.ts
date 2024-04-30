@@ -3,12 +3,12 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     header: {
         backgroundColor: '#FFD665',
-        borderBottomWidth: 1,
-        borderBottomColor: '#e0e0e0',
-        height: 100,
+        // borderBottomWidth: 1,
+        // borderBottomColor: '#e0e0e0',
+        height: 90,
         justifyContent: 'center',
         width : "100%",
-        paddingHorizontal: 16,
+        // paddingHorizontal: 16,
     },
     elementsContainer: {
         flexDirection: 'row',
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         height: 40,
         borderWidth: 1,
         borderColor: '#e0e0e0',
-        borderRadius: 8,
+        // borderRadius: 8,
         paddingHorizontal: 12,
         paddingVertical: 5,
         backgroundColor: 'white',
