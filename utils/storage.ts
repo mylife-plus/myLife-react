@@ -20,3 +20,15 @@ export const loadData = async (key: string): Promise<any | null> => {
     return null;
   }
 };
+
+export const loadAllData = async (): Promise<any | null> =>{
+  try {
+    const keys = await AsyncStorage.getAllKeys();
+    const jsonValues = await AsyncStorage.multiGet(keys)
+    return jsonValues;
+  }
+  catch (e) {
+    console.error("Error loading data", e);
+    return null;
+  }
+}
