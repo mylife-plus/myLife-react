@@ -7,6 +7,7 @@ import MenuScreen from '../screens/MenuScreen';
 import SettingsMenu from '../screens/SettingsMenu';
 import CashFlow from '../screens/SettingsMenu/CashFlowSettingScreen';
 import MemorySettingScreen from '../screens/SettingsMenu/MemorySettingsScreen';
+import SettingScreen from '../screens/SettingScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +17,7 @@ export const navigators = [
    
     {
         name: 'Setting',
-        component: SettingsMenu,
+        component: SettingScreen,
         options: {
             headerShown: false,
             headerStyle: {

@@ -12,6 +12,7 @@ import SettingNavigator from './SettingNavigator';
 import MemoriesNavigator from './MemoryNavigator';
 import MapNavigator from './MapsNavigator';
 import ProfileNavigator from './ProfileNavigator';
+import ContactScreen from '../screens/ContactScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -44,9 +45,10 @@ function BottomTabNavigator() {
                 }}
             />
             <Tab.Screen 
-                name="Profile" 
+                name="Map" 
                 component={MapNavigator} 
                 options={{
+                    headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <View style={[styles.tabIconContainer, focused && styles.focused]}>
                             <Image
@@ -60,8 +62,10 @@ function BottomTabNavigator() {
             />
             <Tab.Screen 
                 name="Cashflow" 
-                component={ProfileNavigator} 
+                component={ContactScreen} 
                 options={{
+                    headerShown: false,
+
                     tabBarIcon: ({ focused }) => (
                         <View style={[styles.tabIconContainer, focused && styles.focused]}>
                             <Image
@@ -85,7 +89,7 @@ function BottomTabNavigator() {
                 />
             </View>
         ),
-        headerShown: true,
+        headerShown: false,
         headerStyle: {
             shadowOpacity: 0, // Remove shadow for iOS
             elevation: 0, // Remove shadow for Android
