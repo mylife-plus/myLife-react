@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import styles from './style';
 import Header from '../../components/MemoriesComponents/Header';
@@ -11,6 +11,10 @@ const Memories: React.FC = () => {
     <View style={styles.container}>
 
       <Header />
+      <Text style={{ textAlign: 'center', padding: 16 }}>
+        The screen you're seeing now is still under development. That's why you're seeing this text.
+        Once development is complete, the memory posts will appear here. Until then, please don't give it much importance.
+      </Text>
      
  
     </View>
