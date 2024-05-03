@@ -24,7 +24,7 @@ function BottomTabNavigator() {
                 
             }}
             screenOptions={{
-                tabBarStyle: { backgroundColor: 'transparent',borderBlockColor: 'transparent'},
+                tabBarStyle: { backgroundColor: 'white',borderBlockColor: 'white',},
               }}
             
         >
@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
     },
     focused: {
         // backgroundColor: '#CCCCCC', // Background color when the tab is focused
+        
         opacity : 1
         
     },
