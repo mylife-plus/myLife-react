@@ -14,6 +14,8 @@ const listData: ListItem[] = [
   { key: 'spacer1', title: '', icon: null },
   { key: 'idea', title: 'Idea', icon: require('../../../assets/Settings-Icons/lightbulbIcon.png'), notifications: 3 },
   { key: 'problem', title: 'Problem', icon: require('../../../assets/Settings-Icons/problemIcon.png'), notifications: 3 },
+  { key: 'spacer1', title: '', icon: null },
+  { key: 'moos', title: 'MOOS', icon: require('../../../assets/Settings-Icons/moosIcon.png') },
 ];
 
 const SettingsMenu: React.FC = () => {
