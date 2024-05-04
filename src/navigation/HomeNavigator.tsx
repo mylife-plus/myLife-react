@@ -19,13 +19,13 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigator() {
     return (
         <Tab.Navigator
-            tabBarOptions={{
-                showLabel: false, // Hide the tab labels
-                
-            }}
-            screenOptions={{
-                tabBarStyle: { backgroundColor: 'transparent',borderBlockColor: 'transparent'},
-              }}
+        screenOptions={{
+            tabBarShowLabel: false, // Hide the tab labels
+            tabBarStyle: {
+                backgroundColor: 'white',
+                borderBlockColor: 'white',
+            },
+        }}
             
         >
             <Tab.Screen 
@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
     },
     focused: {
         // backgroundColor: '#CCCCCC', // Background color when the tab is focused
+        
         opacity : 1
         
     },

@@ -32,3 +32,4 @@ export const loadAllData = async (): Promise<any | null> =>{
     return null;
   }
 }
+

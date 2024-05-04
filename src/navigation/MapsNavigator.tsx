@@ -1,3 +1,6 @@
+/* This code snippet is defining a React component called `MapNavigator` that uses the
+`createStackNavigator` function from the `@react-navigation/stack` library to create a stack
+navigator for navigating between different screens in a React Native application. */
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { View, Text, Image, StyleSheet } from 'react-native';
@@ -15,7 +18,7 @@ export const navigators = [
     
    
     {
-        name: 'Map',
+        name: 'MapScreen',
         component: MapScreen,
         options: {
             headerShown: false
@@ -24,6 +27,9 @@ export const navigators = [
    
 ];
 
+/* The `const MapNavigator: React.FC = () => { ... }` block in the code snippet is defining a
+functional component named `MapNavigator` using TypeScript and React. Inside this component, it
+returns a `Stack.Navigator` component from the `@react-navigation/stack` library. */
 const MapNavigator: React.FC = () => {
     return (
         <Stack.Navigator
@@ -37,6 +43,8 @@ const MapNavigator: React.FC = () => {
                     />
                 ),
             }}
+/* This part of the code snippet is defining the screens within the `MapNavigator` component using the
+`Stack.Screen` component provided by the `@react-navigation/stack` library. */
         >
             {navigators.map((item, index) => (
                 <Stack.Screen
