@@ -19,13 +19,13 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigator() {
     return (
         <Tab.Navigator
-            tabBarOptions={{
-                showLabel: false, // Hide the tab labels
-                
-            }}
-            screenOptions={{
-                tabBarStyle: { backgroundColor: 'white',borderBlockColor: 'white',},
-              }}
+        screenOptions={{
+            tabBarShowLabel: false, // Hide the tab labels
+            tabBarStyle: {
+                backgroundColor: 'white',
+                borderBlockColor: 'white',
+            },
+        }}
             
         >
             <Tab.Screen 
