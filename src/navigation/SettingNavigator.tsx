@@ -7,13 +7,12 @@ import MenuScreen from '../screens/MenuScreen';
 import SettingsMenu from '../screens/SettingsMenu';
 import CashFlow from '../screens/SettingsMenu/CashFlowSettingScreen';
 import MemorySettingScreen from '../screens/SettingsMenu/MemorySettingsScreen';
+import SecuritySettingsScreen from '../screens/SettingsMenu/SecuritySettingsScreen';
+import DataSettingsScreen from '../screens/SettingsMenu/DataSettingsScreen';
 
 const Stack = createStackNavigator();
 
 export const navigators = [
-  
-   
-   
     {
         name: 'Setting',
         component: SettingsMenu,
@@ -79,6 +78,52 @@ export const navigators = [
                         style={{ width: 20, height: 20, marginRight: 10 }} 
                     />
                     <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Memory</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'security',
+        component: SecuritySettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/lockIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Security</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'data',
+        component: DataSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/dataIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Data</Text>
                 </View>
             ),
         }

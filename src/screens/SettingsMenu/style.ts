@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   icon: {
-    width: 32,
+    width: 35,
     height: 32,
     marginRight: 20,
   },
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   spacer: {
-    height: 30, 
+    height: 20, 
     backgroundColor: '#FFF7E3', 
   },
 });
