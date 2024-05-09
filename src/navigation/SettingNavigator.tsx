@@ -8,6 +8,9 @@ import SettingsMenu from '../screens/SettingsMenu';
 import CashFlow from '../screens/SettingsMenu/CashFlowSettingScreen';
 import MemorySettingScreen from '../screens/SettingsMenu/MemorySettingsScreen';
 import SettingScreen from '../screens/SettingScreen';
+import DataSettingsScreen from '../screens/SettingsMenu/DataSettingsScreen';
+import SecuritySettingsScreen from '../screens/SettingsMenu/SecuritySettingsScreen';
+import UiSettingsScreen from '../screens/SettingsMenu/UiSettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,7 +20,7 @@ export const navigators = [
    
     {
         name: 'Setting',
-        component: SettingScreen,
+        component: SettingsMenu,
         options: {
             headerShown: false,
             headerStyle: {
@@ -83,6 +86,75 @@ export const navigators = [
                 </View>
             ),
         }
+    },
+    {
+        name: 'security',
+        component: SecuritySettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/lockIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Security</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'data',
+        component: DataSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/dataIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Data</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'ui',
+        component: UiSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/UiIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>UI</Text>
+                </View>
+            ),
+        }
     }
 ];
 
@@ -111,5 +183,4 @@ const SettingNavigator: React.FC = () => {
         </Stack.Navigator>
     );
 };
-
 export default SettingNavigator;
