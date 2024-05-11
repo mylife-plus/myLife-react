@@ -9,7 +9,7 @@ const SecuritySettingsScreen: React.FC = () => {
     const [encryptEnabled, setEncryptEnabled] = useState(true);
     const [keyStoreEnabled, setKeyStoreEnabled] = useState(false);
     const [pinEnabled, setPinEnabled] = useState(true);
-    const publicKey = '0x998....fsd98'; //exp
+    const publicKey = '0x998...fsd98'; //exp
 
     return (
         <View style={styles.container}>
