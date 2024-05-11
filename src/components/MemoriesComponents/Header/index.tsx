@@ -2,8 +2,10 @@ import React from 'react';
 import { View, TextInput, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import styles from './style';
+import { useNavigation } from '@react-navigation/native';
 
 const Header: React.FC = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.header}>
             <SafeAreaView style={styles.elementsContainer}>
@@ -17,11 +19,11 @@ const Header: React.FC = () => {
                     
                     {/* Icons container */}
                     <View style={{ flexDirection: 'row', width: 100 , justifyContent: 'space-between', alignItems: 'center' }}>
-                        <TouchableOpacity style={styles.icon}>
+                        <TouchableOpacity style={styles.icon} onPress={() => navigation.navigate('filterMemory')}>
                             {/* <Ionicons size={24} color="black" source={require('../../../../assets/filter-icons/filter.png')} /> */}
                             <Image source={require('../../../../assets/filter-icons/filter.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.icon}>
+                        <TouchableOpacity style={styles.icon} onPress={() => navigation.navigate('AddMemory')}>
                             {/* <Ionicons name="add" size={24} color="black" /> */}
                             <Image source={require('../../../../assets/filter-icons/add.png')} />
 
