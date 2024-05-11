@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 const style = StyleSheet.create({
     screenBackground: {
         flex: 1,
-        backgroundColor: '#F6DD8F',
+        backgroundColor: '#FFD665',
     },
     container: {
         flex: 1,
-        backgroundColor: '#FFF7E3'
+        backgroundColor: 'rgba(255, 255, 255, 0.4)',
     },
     sectionHeader: {
         flexDirection: 'row',
@@ -17,7 +17,7 @@ const style = StyleSheet.create({
     },
     spacerScreen: {
         height: 10,
-        backgroundColor: '#F6DD8F'
+        backgroundColor: '#FFD665'
     },
     spacer: {
         height: 15,

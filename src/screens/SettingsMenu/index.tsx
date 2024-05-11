@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import ListItemComponent from '../../components/SettingsComponents/SettingsMenu/ListItemComponent';
 import { ListItem } from '../../components/SettingsComponents/SettingsMenu/ListItemType';
 import styles from './style';
+import { StatusBar } from 'react-native';
 
 const listData: ListItem[] = [
     { key: 'spacer1', title: '', icon: null },
@@ -28,7 +29,9 @@ const SettingsMenu: React.FC = () => {
 
   return (
     <View style={styles.container}>
+   
         <FlatList
+        style={styles.transparentHolder}
             data={listData}
             renderItem={({ item }) => (
                 <ListItemComponent
@@ -38,7 +41,8 @@ const SettingsMenu: React.FC = () => {
             )}
             keyExtractor={(item) => item.key}
         />
-    </View>
+
+    </View >
 );
 };
 

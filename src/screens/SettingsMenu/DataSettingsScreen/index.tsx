@@ -7,8 +7,9 @@ import styles from './style';
 
 const DataSettingsScreen: React.FC = () => {
     return (
-        <View style={[styles.screenBackground, styles.container]}>
+        <View style={styles.screenBackground}>
             <View style={styles.spacerScreen}/>
+            <View style={styles.container}>
             <SectionHeader icon="memoryIcon" title="Memory" />
             <ActionItem title="upload GPS Points" onPressMessage="Upload GPS Points" />
             <ActionItem title="upload Media with GPS" onPressMessage="Upload Media with GPS" />
@@ -20,6 +21,7 @@ const DataSettingsScreen: React.FC = () => {
             <ActionItem title="download myLife data" onPressMessage="Download myLife data" />
             <ActionItem title="upload myLife data" onPressMessage="Upload myLife data" />
             <EraseDataItem onPressMessage="erase All Data" />
+            </View>
         </View>
     );
 };

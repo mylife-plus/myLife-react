@@ -3,7 +3,10 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF7E3',
+    backgroundColor: '#FFD665',
+  },
+  transparentHolder: {
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
   item: {
     flexDirection: 'row',
@@ -11,7 +14,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#E0E0E0',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'white',
   },
   icon: {
     width: 35,
@@ -32,14 +35,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     borderRadius: 15,
     padding: 5,
-    marginRight: 20,
+    marginRight: 5,
   },
   notificationText: {
     color: '#fff',
   },
   spacer: {
     height: 20, 
-    backgroundColor: '#FFF7E3', 
+    backgroundColor: 'rgba(255, 255, 255, 0.2)', 
   },
 });
 
