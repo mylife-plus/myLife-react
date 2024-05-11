@@ -9,6 +9,7 @@ import SecuritySettingsScreen from '../screens/SettingsMenu/SecuritySettingsScre
 import UiSettingsScreen from '../screens/SettingsMenu/UiSettingsScreen';
 import IdeaScreen from '../screens/SettingsMenu/IdeaSettingsScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import ProblemSettingsScreen from '../screens/SettingsMenu/ProblemSettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -107,6 +108,30 @@ export const navigators = [
                         style={{ width: 20, height: 20, marginRight: 10 }} 
                     />
                     <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Security</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'problem',
+        component: ProblemSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+                height: 100
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/problemIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Problem</Text>
                 </View>
             ),
         }

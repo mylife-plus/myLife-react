@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import styles from './style';
 
-interface Idea {
+interface Problem {
     id: string;
     text: string;
     user: string;
@@ -14,26 +14,25 @@ interface Idea {
     comments: number;
 }
 
-const IdeaScreen: React.FC = () => {
-    const [ideas, setIdeas] = useState<Idea[]>([
-        { id: '1', text: 'New Idea super cool yeahhhh asdf asjkldf salkdfjalskdjf asldksdf', user: 'Susi Mupi', userImage: '../../../../assets/avatarTest.png', likes: 35, time: '10 min ago', comments: 2 },
-        { id: '2', text: 'Another great idea here!', user: 'Pete987', userImage: '../../../../assets/avatarTest.png', likes: 35, time: '15 min ago', comments: 2 }
+const ProblemScreen: React.FC = () => {
+    const [problems, setProblems] = useState<Problem[]>([
+        { id: '1', text: 'New Problem!!', user: 'Susi Mupi', userImage: '../../../../assets/avatarTest.png', likes: 0, time: '46 min ago', comments: 0 },
     ]);
 
-    const addNewIdea = () => {
-        const newIdea: Idea = {
-            id: (Math.max(...ideas.map(i => parseInt(i.id))) + 1).toString(),
-            text: 'Sample new idea content',
+    const addNewProblem = () => {
+        const newProblem: Problem = {
+            id: (Math.max(...problems.map(i => parseInt(i.id))) + 1).toString(),
+            text: 'Sample new problem content',
             user: 'New User',
             userImage: '../../../../assets/avatarTest.png',
             likes: 0,
             time: 'just now',
             comments: 0
         };
-        setIdeas([newIdea, ...ideas]);
+        setProblems([newProblem, ...problems]);
     };
 
-    const renderItem = ({ item }: { item: Idea }) => (
+    const renderItem = ({ item }: { item: Problem }) => (
         <View style={styles.postContainer}>
             <View style={styles.postTextBackground}>
             <Text style={styles.postText}>{item.text}</Text>
@@ -65,7 +64,9 @@ const IdeaScreen: React.FC = () => {
             </View>
         </View>
     );
-
+    
+    
+    
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -77,12 +78,12 @@ const IdeaScreen: React.FC = () => {
                 <TouchableOpacity>
                     <Icon name="filter-list" size={24} style={styles.icon} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={addNewIdea}>
+                <TouchableOpacity onPress={addNewProblem}>
                 <Ionicons name="add-outline" size={30} color="#666" style={styles.icon} />
                 </TouchableOpacity>
             </View>
             <FlatList
-                data={ideas}
+                data={problems}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
             />
@@ -90,4 +91,4 @@ const IdeaScreen: React.FC = () => {
     );
 };
 
-export default IdeaScreen;
+export default ProblemScreen;
