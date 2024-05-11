@@ -19,13 +19,13 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigator() {
     return (
         <Tab.Navigator
-            tabBarOptions={{
-                showLabel: false, // Hide the tab labels
-                
-            }}
-            screenOptions={{
-                tabBarStyle: { backgroundColor: 'transparent',borderBlockColor: 'transparent'},
-              }}
+        screenOptions={{
+            tabBarShowLabel: false, // Hide the tab labels
+            tabBarStyle: {
+                backgroundColor: 'rgba(255, 214, 101, 0.25)',
+                borderBlockColor: 'rgba(255, 214, 101, 0.25)',
+            },
+        }}
             
         >
             <Tab.Screen 
@@ -129,8 +129,12 @@ const styles = StyleSheet.create({
     },
     focused: {
         // backgroundColor: '#CCCCCC', // Background color when the tab is focused
-        opacity : 1
-        
+        opacity : 1,
+        shadowColor: "#000000", // Color of the shadow
+    shadowOffset: { width: 0, height: 2 }, // Size and direction of the shadow
+    shadowOpacity: 0.6, // Opacity of the shadow
+    shadowRadius: 4, // Blur radius of the shadow
+    elevation: 4, // Ele
     },
 });
 

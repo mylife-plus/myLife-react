@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { View, TextInput, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -36,3 +37,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+

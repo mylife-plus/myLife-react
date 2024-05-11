@@ -1,13 +1,15 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { View, Text, Image, StyleSheet } from 'react-native';
-import HomeScreen from '../screens/HomeScreen';
-import ProfileScreen from '../screens/ProfileScreen';
-import MenuScreen from '../screens/MenuScreen';
 import SettingsMenu from '../screens/SettingsMenu';
 import CashFlow from '../screens/SettingsMenu/CashFlowSettingScreen';
 import MemorySettingScreen from '../screens/SettingsMenu/MemorySettingsScreen';
-import SettingScreen from '../screens/SettingScreen';
+import DataSettingsScreen from '../screens/SettingsMenu/DataSettingsScreen';
+import SecuritySettingsScreen from '../screens/SettingsMenu/SecuritySettingsScreen';
+import UiSettingsScreen from '../screens/SettingsMenu/UiSettingsScreen';
+import IdeaScreen from '../screens/SettingsMenu/IdeaSettingsScreen';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import ProblemSettingsScreen from '../screens/SettingsMenu/ProblemSettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,13 +19,14 @@ export const navigators = [
    
     {
         name: 'Setting',
-        component: SettingScreen,
+        component: SettingsMenu,
         options: {
             headerShown: false,
             headerStyle: {
                 shadowOpacity: 0, // Remove shadow for iOS
                 elevation: 0, // Remove shadow for Android
                 borderBottomWidth: 0, 
+                height: 100
             },
             headerBackTitleVisible: false, 
             headerTintColor: 'black', 
@@ -47,6 +50,7 @@ export const navigators = [
                 shadowOpacity: 0, // Remove shadow for iOS
                 elevation: 0, // Remove shadow for Android
                 borderBottomWidth: 0, 
+                backgroundColor: 'rgba(255, 255, 255, 0.5)',
             },
             headerBackTitleVisible: false,
             headerTintColor: 'black', // Set the color of the back button
@@ -83,6 +87,126 @@ export const navigators = [
                 </View>
             ),
         }
+    },
+    {
+        name: 'security',
+        component: SecuritySettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+                height: 100
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/lockIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Security</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'problem',
+        component: ProblemSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+                height: 100
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/problemIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Problem</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'data',
+        component: DataSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0, 
+                height: 100
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/dataIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Data</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'ui',
+        component: UiSettingsScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0,
+                height: 100
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/UiIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>UI</Text>
+                </View>
+            ),
+        }
+    },
+    {
+        name: 'idea',
+        component: IdeaScreen,
+        options: {
+            headerShown: true,
+            headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+                borderBottomWidth: 0,
+                height: 100 
+            },
+            headerBackTitleVisible: false,
+            headerTintColor: 'black',
+            headerTitle: () => (
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image 
+                        source={require('../../assets/Settings-Icons/lightbulbIcon.png')}
+                        style={{ width: 20, height: 20, marginRight: 10 }} 
+                    />
+                    <Text style={{ fontSize: 20, fontWeight: 'regular' }}>Idea</Text>
+                </View>
+            ),
+        }
     }
 ];
 
@@ -93,10 +217,7 @@ const SettingNavigator: React.FC = () => {
                 headerBackTitleVisible: false,
                 headerTintColor: 'black',
                 headerBackImage: () => (
-                    <Image 
-                        source={require('../../assets/Settings-Icons/goBackIcon.png')} 
-                        style={{ width: 25, height: 25, marginLeft: 27 }} 
-                    />
+        <Ionicons name="chevron-back-outline" size={24} color="#666" style={{ marginLeft: 10 }} />
                 ),
             }}
         >
@@ -111,5 +232,4 @@ const SettingNavigator: React.FC = () => {
         </Stack.Navigator>
     );
 };
-
 export default SettingNavigator;
