@@ -1,11 +1,11 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { FlatList, StyleSheet, Dimensions } from 'react-native';
 import PostItem from '../../MemoryPostItem';
-import styles from './style';
-import { useNavigation } from '@react-navigation/native';
+import ScrollPostItem from '../scrollPostItem';
 
-const Posts: React.FC = () => {
-    const navigation = useNavigation();
+const screenHeight = Dimensions.get('window').height;
+
+const ScrollPosts: React.FC = () => {
     // Define an array of post data with unique content for each post
     const postData = [
         {
@@ -46,23 +46,35 @@ const Posts: React.FC = () => {
         }
     ];
 
-    // Render the posts using a map function
+    // Render the posts using FlatList with vertical scrolling and pagination
     return (
-        <ScrollView style={styles.postsContainer} >
-            {postData.map((post, index) => (
-                <PostItem
-                    key={index}
-                    date={post.date}
-                    location={post.location}
-                    taggedPeople={post.taggedPeople}
-                    postContent={post.postContent}
-                    mediaType={post.mediaType}
-                    mediaUri={post.mediaUri}
-                    tags={post.tags}
+        <FlatList
+            data={postData}
+            renderItem={({ item }) => (
+                <ScrollPostItem
+                    date={item.date}
+                    location={item.location}
+                    taggedPeople={item.taggedPeople}
+                    postContent={item.postContent}
+                    mediaType={item.mediaType}
+                    mediaUri={item.mediaUri}
+                    tags={item.tags}
                 />
-            ))}
-        </ScrollView>
+            )}
+            keyExtractor={(item, index) => index.toString()}
+            pagingEnabled={true}
+            horizontal={false}
+            showsVerticalScrollIndicator={true}
+            style={styles.flatList}
+        />
     );
 };
 
-export default Posts;
+const styles = StyleSheet.create({
+    flatList: {
+        flex: 1, // Use flex: 1 to take up the whole screen
+        height: "80%" ,
+    },
+});
+
+export default ScrollPosts;

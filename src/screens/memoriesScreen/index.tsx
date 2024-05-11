@@ -5,16 +5,15 @@ import styles from './style';
 import Header from '../../components/MemoriesComponents/Header';
 import Posts from '../../components/MemoriesComponents/PostsList';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
 
 const Memories: React.FC = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
 
       <Header />
-      <Text style={{ textAlign: 'center', padding: 16 }}>
-        The screen you're seeing now is still under development. That's why you're seeing this text.
-        Once development is complete, the memory posts will appear here. Until then, please don't give it much importance.
-      </Text>
+    <Posts/>
      
  
     </View>
@@ -23,3 +22,4 @@ const Memories: React.FC = () => {
 };
 
 export default Memories;
+
