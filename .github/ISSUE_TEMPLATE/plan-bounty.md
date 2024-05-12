@@ -1,6 +1,6 @@
 ---
 name: Plan Bounty
-about: 'Bounty from a 30 days plan '
+about: 'Bounty from plan '
 title: ''
 labels: ''
 assignees: ''
