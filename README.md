@@ -1,6 +1,6 @@
 # myLife
 ## Overview
-mylife is an open source project. The initial idea is to provide a offline first diary app for users to store their memories [(see figma file)](https://www.figma.com/design/DQp9RG2Fa6XXsVH0h1D26m/myLife?node-id=0%3A1&t=Q4GJVzFWpUyhciF1-1). The project gets governed by the myLife stakehoders, which are the Users, the developers and Donors/Investors aka [myLife DAO](https://www.figma.com/board/aq4b1niEivXWgBfENSppyu/myLife-Dao?node-id=0%3A1&t=ZcBomcOELrZ69gHr-1).
+mylife is an open source project. The initial idea is to provide a offline first diary app for users to store their memories [(see figma file)](https://www.figma.com/design/DQp9RG2Fa6XXsVH0h1D26m/myLife?node-id=0%3A1&t=Q4GJVzFWpUyhciF1-1). The project gets governed by the myLife stakehoders, which are the Users, the developers and Donors/Investors aka [myLife DAO](https://www.figma.com/board/aq4b1niEivXWgBfENSppyu/myLife-Dao?node-id=0%3A1&t=ZcBomcOELrZ69gHr-1). The dao is electing the [team](https://github.com/mylife-plus/myLife/discussions/6) which creates the [plan](https://github.com/mylife-plus/myLife/discussions/1) voted on by the dao. the team creates [bounties](https://github.com/mylife-plus/myLife/discussions/7) out of passed plans, which get funded by the donors/investors [funding](https://github.com/mylife-plus/myLife/discussions/4).
 
 ## React Native TypeScript App Documentation
 
