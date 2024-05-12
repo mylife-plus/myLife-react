@@ -1,6 +1,10 @@
-# React Native TypeScript App Documentation
+# myLife
+## Overview
+mylife is an open source project. The initial idea is to provide a offline first diary app for users to store their memories [(see figma file)](https://www.figma.com/design/DQp9RG2Fa6XXsVH0h1D26m/myLife?node-id=0%3A1&t=Q4GJVzFWpUyhciF1-1). The project gets governed by the myLife stakehoders, which are the Users, the developers and Donors/Investors aka [myLife DAO](https://www.figma.com/board/aq4b1niEivXWgBfENSppyu/myLife-Dao?node-id=0%3A1&t=ZcBomcOELrZ69gHr-1).
 
-## Running the App
+## React Native TypeScript App Documentation
+
+### Running the App
 
 To run the app with `npm start`:
 
@@ -19,46 +23,46 @@ To run the app with `npm start`:
 
 4. This will start the Metro bundler and launch the app on the specified emulator or connected device. Follow any on-screen instructions to proceed.
 
-## Project Structure
+### Project Structure
 
-### 1. Screens Folder
+#### 1. Screens Folder
 
 - This folder contains all the screen components for different views in the app.
 - Each screen is typically represented as a TypeScript file (e.g., `HomeScreen.tsx`, `ProfileScreen.tsx`).
 - Screens generally handle the UI layout and business logic for a specific view.
 - Common navigation libraries used include `@react-navigation/native` and `@react-navigation/stack` to manage transitions between screens.
 
-### 2. Components Folder
+#### 2. Components Folder
 
 - This folder contains reusable UI components that can be shared across different screens.
 - Components could include things like buttons, cards, forms, etc.
 - Using reusable components helps maintain consistency in the app's design and reduces redundancy in code.
 
-### 3. Helpers Folder
+#### 3. Helpers Folder
 
 - This folder contains utility functions and other helper modules that perform specific tasks such as formatting dates, making API calls, or manipulating data.
 - Helpers help keep the code organized and improve code readability by separating concerns.
 
-### 4. State (Recoil) Folder
+#### 4. State (Recoil) Folder
 
 - This folder contains state management logic, typically using the Recoil library.
 - It includes atoms and selectors for managing global state across different parts of the app.
 - Recoil provides a centralized way to manage state, making it easier to share state and state changes across different components.
 
-### 5. Style Folder
+#### 5. Style Folder
 
 - This folder contains shared styles and themes for the app.
 - It can include global styles such as colors, fonts, and spacing, as well as reusable style objects.
 - Organizing styles in a central location helps maintain consistency and allows for easier customization.
 
-### 6. Routing Folder
+#### 6. Routing Folder
 
 - This folder contains the app's routing configuration and navigation logic.
 - It includes navigator components, such as `StackNavigator` and `BottomTabNavigator`, that define the app's navigation flow.
 - Routing is organized based on app state and user authentication, allowing for efficient transitions between screens.
 - Use this folder to manage routes and navigation-related logic, ensuring the app's flow is consistent and user-friendly.
 
-## Tips and Best Practices
+### Tips and Best Practices
 
 - **Code Organization**: Organize code logically by placing related files in the same folder. For example, keep all files related to a specific screen in the same folder.
 - **TypeScript**: Leverage TypeScript's static typing to catch errors early and improve code readability and maintainability.
